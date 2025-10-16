@@ -7,83 +7,6 @@
   },
   {
     "type": "text",
-    "label": "General Theme Settings",
-    "margin": "30px 0 20px 0",
-    "size": "25px"
-  },
-  {
-    "type": "separator"
-  },
-  {
-    "property": "wireframe.urlbar.position.top",
-    "label": "Position URL bar at the top (for multiple and collapsed toolbar only)",
-    "default": false,
-    "type": "checkbox",
-    "value": "boolean"
-  },
-  {
-    "type": "separator"
-  },
-  {
-    "type": "dropdown",
-    "property": "wireframe.blank.logo",
-    "label": "Change blank page logo",
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Wireframe"
-      },
-      {
-        "value": 1,
-        "label": "Checks"
-      },
-      {
-        "value": 2,
-        "label": "Starlight"
-      },
-      {
-        "value": 3,
-        "label": "Rings"
-      },
-      {
-        "value": 4,
-        "label": "Waves"
-      },
-      {
-        "value": 5,
-        "label": "Globe"
-      }
-    ]
-  },
-  {
-    "type": "separator"
-  },
-  {
-    "type": "dropdown",
-    "property": "wireframe.blank.theme",
-    "label": "Change color scheme for about:blank",
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Dark Tint"
-      },
-      {
-        "value": 1,
-        "label": "Light Tint"
-      },
-      {
-        "value": 2,
-        "label": "Transparent"
-      }
-    ]
-  },
-
-  {
-    "type": "text",
     "label": "Window Controls",
     "margin": "30px 0 20px 0",
     "size": "25px"
@@ -140,7 +63,8 @@
     "property": "zen.view.experimental-force-window-controls-left",
     "label": "Force window controls to the left (for macOS style controls only)",
     "value": "boolean",
-    "default": true
+    "default": true,
+    "restart": true
   },
 
   {
@@ -189,6 +113,129 @@
     "value": "boolean",
     "default": false
   },
+  
+  {
+    "type": "text",
+    "label": "URL bar Settings",
+    "margin": "30px 0 20px 0",
+    "size": "25px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.urlbar.style",
+    "label": "Change URL bar style",
+    "value": "string",
+    "default": "slim",
+    "options": [
+      {
+        "value": "slim",
+        "label": "slim"
+      },
+      {
+        "value": "full",
+        "label": "full"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "property": "wireframe.urlbar.position.top",
+    "label": "Position URL bar at the top (for multiple and collapsed toolbar only)",
+    "default": false,
+    "type": "checkbox",
+    "value": "boolean"
+  },
+  
+  {
+    "type": "text",
+    "label": "Blank Page Settings",
+    "margin": "30px 0 20px 0",
+    "size": "25px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.blank.logo",
+    "label": "Change blank page logo",
+    "value": "number",
+    "default": 1,
+    "options": [
+      {
+        "value": 0,
+        "label": "No Logo"
+      },
+      {
+        "value": 1,
+        "label": "Wireframe"
+      },
+      {
+        "value": 2,
+        "label": "Checks"
+      },
+      {
+        "value": 3,
+        "label": "Starlight"
+      },
+      {
+        "value": 4,
+        "label": "Rings"
+      },
+      {
+        "value": 5,
+        "label": "Waves"
+      },
+      {
+        "value": 6,
+        "label": "Globe"
+      },
+      {
+        "value": 7,
+        "label": "Smiley"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "string",
+    "property": "wf-blank-logo-size",
+    "defaultValue": "150px",
+    "processAs": "root",
+    "label": "Change blank page logo size",
+    "placeholder": "150px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.blank.theme",
+    "label": "Change color scheme for about:blank",
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Dark Tint"
+      },
+      {
+        "value": 1,
+        "label": "Light Tint"
+      },
+      {
+        "value": 2,
+        "label": "Transparent"
+      }
+    ]
+  },
 
   {
     "type": "text",
@@ -202,7 +249,7 @@
   {
     "type": "checkbox",
     "property": "zen.theme.essentials-favicon-bg",
-    "label": "Disable favicon background for essentials",
+    "label": "Enable favicon gradient background for essentials",
     "value": "boolean",
     "default": true
   },
@@ -215,6 +262,26 @@
     "label": "Disable audio indicator on tab",
     "value": "boolean",
     "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.tab-hover.animation",
+    "label": "Enable tab hover animation",
+    "value": "boolean",
+    "default": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.tab-icon.invert",
+    "label": "Invert tab icon color",
+    "value": "boolean",
+    "default": true
   },
   {
     "type": "separator"
@@ -447,5 +514,112 @@
         "label": "SUSE Mono"
       }
     ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "string",
+    "property": "wireframe-font-size",
+    "processAs": "root",
+    "label": "Change font size for tabs",
+    "defaultValue": "",
+    "placeholder": "12px"
+  },
+  
+  {
+    "type": "text",
+    "label": "Picture-in-Picture",
+    "margin": "30px 0 20px 0",
+    "size": "25px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.pip.disabled",
+    "label": "Disable Picture-in-Picture customization",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.pip.rounded",
+    "label": "Enable rounded corners for PiP window",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.pip.border_radius",
+    "label": "Border radius for PiP controls",
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "0px"
+      },
+      {
+        "value": 4,
+        "label": "4px"
+      },
+      {
+        "value": 6,
+        "label": "6px"
+      },
+      {
+        "value": 8,
+        "label": "8px"
+      },
+      {
+        "value": 10,
+        "label": "10px"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.pip.blur",
+    "label": "Enable blur effect on PiP controls",
+    "value": "boolean",
+    "default": false
+  },
+  
+  {
+    "type": "text",
+    "label": "Media Player",
+    "margin": "30px 0 20px 0",
+    "size": "25px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.player.minimal",
+    "label": "Make the Media Player window minimal (pip, volume, and call controls hidden)",
+    "value": "boolean",
+    "default": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.player.flip",
+    "label": "Flipped media player",
+    "value": "boolean",
+    "default": false
   }
 ]
